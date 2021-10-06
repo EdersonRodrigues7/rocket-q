@@ -23,12 +23,14 @@ html {
   --hover-blue: #5699ff;
   --hover-red: #ea4b65;
   --hover-grey: #8794a7;
+  --gradient: linear-gradient(195.96deg, #5498ff -122.01%, #428eff -8.36%, #297fff 98.4%);
 
   /* FONTS */
   font-size: 62.5%;
 }
 
 body {
+  display: flex;
   height: 100vh;
   width: 100vw;
   background: var(--background);
