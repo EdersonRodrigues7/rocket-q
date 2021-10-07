@@ -14,15 +14,20 @@ html {
   --light-blue: #e0ecff;
   --blue: #3485ff;
   --red: #e83f5b;
+
   --background: #fbfcff;
   --overlay: #040911;
   --icons-details: #a5b0c1;
+
   --dark-grey: #4d5e77;
   --blue-grey: #a1b2cd;
   --light-grey: #e5eaf1;
+  --grey-medium: #d3d9e2;
+
   --hover-blue: #5699ff;
   --hover-red: #ea4b65;
   --hover-grey: #8794a7;
+
   --gradient: linear-gradient(195.96deg, #5498ff -122.01%, #428eff -8.36%, #297fff 98.4%);
 
   /* FONTS */
@@ -40,10 +45,8 @@ body,
 button,
 input,
 textarea {
-  /* clamp é um intervalo de tamanho. Estabelece um mínimo, um padrão e um máximo */
   font-size: clamp(14px, 1.6rem, 2vw);
   font-family: 'Open Sans', sans-serif;
-  /* font-family: 'Poppins', sans-serif; */
 }
 
 .content {
@@ -112,4 +115,16 @@ button.outlined,
   background: var(--white);
   color: var(--blue);
   border: 0.2rem solid var(--blue);
+}
+
+button.red,
+.button.red {
+  background: var(--red);
+  color: var(--white);
+}
+
+button.grey,
+.button.grey {
+  background: var(--light-grey);
+  color: var(--dark-grey);
 }

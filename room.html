@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rocket.Q - Perguntas e Respostas</title>
 
-    <!-- Style -->
+    <!-- Styles -->
     <link rel="stylesheet" href="./styles/global.css" />
     <link rel="stylesheet" href="./styles/room.css" />
+    <link rel="stylesheet" href="./styles/modal.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,9 +45,87 @@
               id="question"
               placeholder="O que você quer perguntar?"
             ></textarea>
+            <footer>
+              <div><img src="./assets/lock.svg" alt="Cadeado" />Esta pergunta é anônima</div>
+              <button class="button">Enviar</button>
+            </footer>
           </form>
         </section>
+        <section id="questions">
+          <h2 class="scr-only">Perguntas da Comunidade</h2>
+          <div class="questions">
+            <div class="question-wrapper">
+              <div class="question-content">
+                <div class="user">
+                  <img src="./assets/user.svg" alt="User avatar" />
+                </div>
+                <div class="question">
+                  <p>Qual a diferença entre const, var e let no JavaScript?</p>
+                </div>
+              </div>
+              <div class="actions">
+                <a href="#" class="check">
+                  <img src="./assets/check.svg" alt="Check: Marcar como lida" />Marcar como lida
+                </a>
+                <a href="#" class="check">
+                  <img src="./assets/trash.svg" alt="Lixeira: Excluir" />Excluir
+                </a>
+              </div>
+            </div>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <div class="user">
+                  <img src="./assets/user.svg" alt="User avatar" />
+                </div>
+                <div class="question">
+                  <p>O que é JavaScript?</p>
+                </div>
+              </div>
+              <div class="actions">
+                <a href="#" class="check">
+                  <img src="./assets/check.svg" alt="Check: Marcar como lida" />Marcar como lida
+                </a>
+                <a href="#" class="check">
+                  <img src="./assets/trash.svg" alt="Lixeira: Excluir" />Excluir
+                </a>
+              </div>
+            </div>
+            <div class="question-wrapper">
+              <div class="question-content">
+                <div class="user">
+                  <img src="./assets/user.svg" alt="User avatar" />
+                </div>
+                <div class="question">
+                  <p>O que é TypeScript?</p>
+                </div>
+              </div>
+              <div class="actions">
+                <a href="#" class="check">
+                  <img src="./assets/check.svg" alt="Check: Marcar como lida" />Marcar como lida
+                </a>
+                <a href="#" class="check">
+                  <img src="./assets/trash.svg" alt="Lixeira: Excluir" />Excluir
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
+    </div>
+    <!-- MODAL -->
+    <div class="modal-wrapper active">
+      <div class="modal">
+        <h2>Excluir Pergunta</h2>
+        <p>Tem certeza que você deseja excluir esta pergunta?</p>
+        <form action="#">
+          <label for-id="password" class="scr-only">Digite sua senha admin</label>
+          <input id="password" type="password" name="password" placeholder="Digite sua senha" />
+          <div class="buttons">
+            <div class="button grey">Cancelar</div>
+            <button class="red">Sim, excluir</button>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
