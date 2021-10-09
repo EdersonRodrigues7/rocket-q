@@ -36,7 +36,7 @@ module.exports = {
       }
     }
 
-    await db.close(``);
+    await db.close();
 
     res.redirect(`/room/${roomId}`);
   },
