@@ -29,8 +29,8 @@
           <a href="/"><img src="/images/logo.svg" alt="Logo Rocket.Q" /></a>
         </div>
         <div class="buttons">
-          <div id="room-id" data-id="323243" class="button outlined">
-            #323243<img id="img1" src="/images/copy.svg" alt="Copiar Número da Sala" />
+          <div id="room-id" data-id="<%= roomId %>" class="button outlined">
+            #<%= roomId %><img id="img1" src="/images/copy.svg" alt="Copiar Número da Sala" />
           </div>
           <a id="create-room" class="button" href="#"
             ><img id="img1" src="/images/users1.svg" alt="Criar Sala" />Criar Sala</a
@@ -40,7 +40,7 @@
       <main>
         <section id="question-form">
           <h2>Faça sua Pergunta</h2>
-          <form action="">
+          <form action="" method="POST">
             <label class="scr-only" for-id="question">O que você quer perguntar?</label>
             <textarea
               name="question"
