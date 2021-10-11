@@ -8,6 +8,7 @@ export default function Modal() {
   }
   function close() {
     modalWrapper.classList.remove('active');
+    console.log('entendi, fechando');
   }
 
   return { open, close };

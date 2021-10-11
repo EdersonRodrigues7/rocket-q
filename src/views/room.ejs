@@ -32,7 +32,7 @@
           <div id="room-id" data-id="<%= roomId %>" class="button outlined">
             #<%= roomId %><img id="img1" src="/images/copy.svg" alt="Copiar Número da Sala" />
           </div>
-          <a id="create-room" class="button" href="#"
+          <a id="create-room" class="button" href="/create-pass"
             ><img id="img1" src="/images/users1.svg" alt="Criar Sala" />Criar Sala</a
           >
         </div>
@@ -56,78 +56,43 @@
         <section id="questions">
           <h2 class="scr-only">Perguntas da Comunidade</h2>
           <div class="questions">
+            <% if(isNoQuestions){ %> <%- include('parts/no-question') %> <% } %> <%
+            questions.forEach(question => { %>
             <div class="question-wrapper">
               <div class="question-content">
                 <div class="user">
                   <img src="/images/user.svg" alt="User avatar" />
                 </div>
                 <div class="question">
-                  <p>Qual a diferença entre const, var e let no JavaScript?</p>
+                  <p><%= question.title %></p>
                 </div>
               </div>
               <div class="actions">
-                <a href="#" class="check" data-id="2">
+                <a href="#" class="check" data-id="<%= question.id %>">
                   <img src="/images/check.svg" alt="Check: Marcar como lida" />Marcar como lida
                 </a>
-                <a href="#" class="delete" data-id="2">
+                <a href="#" class="delete" data-id="<%= question.id %>">
                   <img src="/images/trash.svg" alt="Lixeira: Excluir" />Excluir
                 </a>
               </div>
             </div>
-            <div class="question-wrapper">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/user.svg" alt="User avatar" />
-                </div>
-                <div class="question">
-                  <p>O que é JavaScript?</p>
-                </div>
-              </div>
-              <div class="actions">
-                <a href="#" class="check" data-id="3">
-                  <img src="/images/check.svg" alt="Check: Marcar como lida" />Marcar como lida
-                </a>
-                <a href="#" class="delete" data-id="3">
-                  <img src="/images/trash.svg" alt="Lixeira: Excluir" />Excluir
-                </a>
-              </div>
-            </div>
-            <div class="question-wrapper">
-              <div class="question-content">
-                <div class="user">
-                  <img src="/images/user.svg" alt="User avatar" />
-                </div>
-                <div class="question">
-                  <p>O que é TypeScript?</p>
-                </div>
-              </div>
-              <div class="actions">
-                <a href="#" class="check" data-id="4">
-                  <img src="/images/check.svg" alt="Check: Marcar como lida" />Marcar como lida
-                </a>
-                <a href="#" class="delete" data-id="4">
-                  <img src="/images/trash.svg" alt="Lixeira: Excluir" />Excluir
-                </a>
-              </div>
-            </div>
+            <% }); %> <% questionsRead.forEach(questionRead => { %>
             <div class="question-wrapper read">
               <div class="question-content">
                 <div class="user">
                   <img src="/images/user.svg" alt="User avatar" />
                 </div>
                 <div class="question">
-                  <p>O que é MongoDB?</p>
+                  <p><%= questionRead.title %></p>
                 </div>
               </div>
               <div class="actions">
-                <a href="#" class="check" data-id="1">
-                  <img src="/images/check.svg" alt="Check: Marcar como lida" />Marcar como lida
-                </a>
-                <a href="#" class="delete" data-id="1">
+                <a href="#" class="delete" data-id="<%= questionRead.id %>">
                   <img src="/images/trash.svg" alt="Lixeira: Excluir" />Excluir
                 </a>
               </div>
             </div>
+            <% }); %>
           </div>
         </section>
       </main>
